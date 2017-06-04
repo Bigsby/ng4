@@ -21,11 +21,15 @@ http://exploringjs.com/es6/ch_promises.html
 http://exploringjs.com/es6.html
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
+https://angular.io/docs/ts/latest/guide/router.html
 
+https://angular.io/docs/ts/latest/guide/pipes.html
 
 
 
 > ng generate component HeroDetail -is -it --flat --spec false --prefix false
 > ng generate class Hero --spec false
 > ng generate service Hero --flat --spec false
-
+> ng generate component App -is -it -flat --spec false --prefix false
+> ng generate component Dashboard -is -it --flat --spec false --prefix false
+> ng generate module AppRouting --flat --spec false
