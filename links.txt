@@ -5,3 +5,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 https://angular.io/docs/ts/latest/guide/forms.html
 https://angular.io/docs/ts/latest/guide/template-syntax.html
 
+https://angular.io/docs/ts/latest/guide/user-input.html
+https://angular.io/docs/ts/latest/guide/structural-directives.html
+
+
