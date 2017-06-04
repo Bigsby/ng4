@@ -11,8 +11,21 @@ https://angular.io/docs/ts/latest/guide/structural-directives.html
 https://angular.io/docs/ts/latest/guide/style-guide.html
 
 https://angular.io/docs/ts/latest/guide/attribute-directives.html
+https://angular.io/docs/ts/latest/guide/ngmodule.html
+
+https://angular.io/docs/ts/latest/guide/glossary.html
+https://angular.io/docs/ts/latest/guide/dependency-injection.html
+https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
+
+http://exploringjs.com/es6/ch_promises.html
+http://exploringjs.com/es6.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+
 
 
 
 > ng generate component HeroDetail -is -it --flat --spec false --prefix false
+> ng generate class Hero --spec false
+> ng generate service Hero --flat --spec false
 
