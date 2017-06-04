@@ -8,4 +8,11 @@ https://angular.io/docs/ts/latest/guide/template-syntax.html
 https://angular.io/docs/ts/latest/guide/user-input.html
 https://angular.io/docs/ts/latest/guide/structural-directives.html
 
+https://angular.io/docs/ts/latest/guide/style-guide.html
+
+https://angular.io/docs/ts/latest/guide/attribute-directives.html
+
+
+
+> ng generate component HeroDetail -is -it --flat --spec false --prefix false
 
