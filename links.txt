@@ -1,0 +1,7 @@
+
+https://angular.io/docs/ts/latest/guide/displaying-data.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+https://angular.io/docs/ts/latest/guide/forms.html
+https://angular.io/docs/ts/latest/guide/template-syntax.html
+
