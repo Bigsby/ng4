@@ -1,36 +1,44 @@
-
-https://angular.io/docs/ts/latest/guide/displaying-data.html
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
-https://angular.io/docs/ts/latest/guide/forms.html
-https://angular.io/docs/ts/latest/guide/template-syntax.html
-
-https://angular.io/docs/ts/latest/guide/user-input.html
-https://angular.io/docs/ts/latest/guide/structural-directives.html
-
-https://angular.io/docs/ts/latest/guide/style-guide.html
-
-https://angular.io/docs/ts/latest/guide/attribute-directives.html
-https://angular.io/docs/ts/latest/guide/ngmodule.html
 * https://angular.io/docs/ts/latest/guide/appmodule.html
-
+* https://angular.io/docs/ts/latest/guide/displaying-data.html
+* https://angular.io/docs/ts/latest/guide/user-input.html
+* https://angular.io/docs/ts/latest/guide/forms.html
+* https://angular.io/docs/ts/latest/guide/dependency-injection.html
+* https://angular.io/docs/ts/latest/guide/template-syntax.html
+https://angular.io/docs/ts/latest/guide/style-guide.html
 https://angular.io/docs/ts/latest/guide/glossary.html
-https://angular.io/docs/ts/latest/guide/dependency-injection.html
-https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
-
-http://exploringjs.com/es6/ch_promises.html
-http://exploringjs.com/es6.html
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-
-https://angular.io/docs/ts/latest/guide/router.html
 
 https://angular.io/docs/ts/latest/guide/pipes.html
+https://angular.io/docs/ts/latest/guide/attribute-directives.html
+https://angular.io/docs/ts/latest/guide/structural-directives.html
+https://angular.io/docs/ts/latest/guide/ngmodule.html
+https://angular.io/docs/ts/latest/guide/security.html
+https://angular.io/docs/ts/latest/guide/hierarchical-dependency-injection.html
+https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
+https://angular.io/docs/ts/latest/guide/router.html
 https://angular.io/docs/ts/latest/guide/server-communication.html#in-mem-web-api
-https://angular.io/docs/ts/latest/tutorial/toh-pt6.html#rxjs-imports
+https://angular.io/docs/ts/latest/guide/testing.html
+
+https://angular.io/docs/ts/latest/cookbook/ngmodule-faq.html#q-root-component-or-module
+
+https://angular.io/docs/ts/latest/api/core/index/ViewChild-decorator.html
+https://angular.io/docs/ts/latest/api/core/index/ContentChild-decorator.html
+https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html
+https://angular.io/docs/ts/latest/api/forms/index/ControlValueAccessor-interface.html
+https://angular.io/docs/ts/latest/api/common/index/NgFor-directive.html
 
 http://reactivex.io/rxjs
 http://www.learnrxjs.io/operators/transformation/switchmap.html
-
+http://karma-runner.github.io/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+http://exploringjs.com/es6/ch_promises.html
+http://exploringjs.com/es6.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://en.wikipedia.org/wiki/Service_locator_pattern
+http://blog.thoughtram.io/angular/2015/09/03/forward-references-in-angular-2.html
+https://coursetro.com/posts/code/66/Angular-4-Reactive-Forms-Tutorial
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+https://developer.mozilla.org/en-US/docs/Web/SVG
+https://developer.mozilla.org/en-US/docs/Web/Web_Components
 
 
 Tour of Heroes
@@ -47,3 +55,11 @@ Hero Form
 > ng new hero-form -st
 > ng generate class Hero
 > 
+
+
+ERRORS:
+Message: Only void and foreign elements can be self closed "button"
+Problem: HTML tag "button" is self closing, e.g., "<button/>" and must be "<button></button>"
+
+Message: Can't bind to 'ngModel' since it isn't a known property of 'input'
+Problem: FormsModule not imported add "@angular/forms" in app.module and to AppModule imports
