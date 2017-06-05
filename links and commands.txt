@@ -12,6 +12,7 @@ https://angular.io/docs/ts/latest/guide/style-guide.html
 
 https://angular.io/docs/ts/latest/guide/attribute-directives.html
 https://angular.io/docs/ts/latest/guide/ngmodule.html
+* https://angular.io/docs/ts/latest/guide/appmodule.html
 
 https://angular.io/docs/ts/latest/guide/glossary.html
 https://angular.io/docs/ts/latest/guide/dependency-injection.html
