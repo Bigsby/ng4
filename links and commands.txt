@@ -24,6 +24,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arro
 https://angular.io/docs/ts/latest/guide/router.html
 
 https://angular.io/docs/ts/latest/guide/pipes.html
+https://angular.io/docs/ts/latest/guide/server-communication.html#in-mem-web-api
+https://angular.io/docs/ts/latest/tutorial/toh-pt6.html#rxjs-imports
+
+http://reactivex.io/rxjs
+http://www.learnrxjs.io/operators/transformation/switchmap.html
+
 
 
 
@@ -33,3 +39,5 @@ https://angular.io/docs/ts/latest/guide/pipes.html
 > ng generate component App -is -it -flat --spec false --prefix false
 > ng generate component Dashboard -is -it --flat --spec false --prefix false
 > ng generate module AppRouting --flat --spec false
+> npm i --save angular-in-memory-web-api
+> ng generate service InMemoryData -false --spec false
