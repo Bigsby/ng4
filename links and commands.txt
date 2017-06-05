@@ -33,7 +33,7 @@ http://www.learnrxjs.io/operators/transformation/switchmap.html
 
 
 
-
+Tour of Heroes
 > ng generate component HeroDetail -is -it --flat --spec false --prefix false
 > ng generate class Hero --spec false
 > ng generate service Hero --flat --spec false
@@ -42,3 +42,8 @@ http://www.learnrxjs.io/operators/transformation/switchmap.html
 > ng generate module AppRouting --flat --spec false
 > npm i --save angular-in-memory-web-api
 > ng generate service InMemoryData -false --spec false
+
+Hero Form
+> ng new hero-form -st
+> ng generate class Hero
+> 
