@@ -399,7 +399,9 @@ Angular 4 & OWIN Web Api
         <button (click)="callService()">Call Service</button>
         ```
     6. Run and test . Assuming Web project (**F5** in Visual Studio) and Angular (**ng serve** in the command line) are running, the browser should display first:
+        
         ![](images/simpleBeforeCall.PNG)
         
         and, after clicking ```Call Service``` button, should display:
+        
         ![](images/simpleAfterCall.PNG)
