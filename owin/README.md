@@ -436,3 +436,7 @@ Angular 4 & OWIN Web Api
         }
         ```
     This will re-compile and re-package the Angular application into ```wwwroot``` folder.
+
+9. Debugging
+    Running in *Google Chrome* will enable debugging both the client **.ts** files and the server (Api) **.cs** files.
+    
