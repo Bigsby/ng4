@@ -46,6 +46,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <ExcludeFromPackageFolders Include="e2e;src">
+      <FromTarget>NotNeeded</FromTarget>
+    </ExcludeFromPackageFolders>
+    <ExcludeFromPackageFiles Include=".angular-cli.json;karma.conf.js;package.json;packages.config;protractor.conf.js;tsconfig.json;tslint.json">
+      <FromTarget>NotNeeded</FromTarget>
+    </ExcludeFromPackageFiles>
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -113,6 +121,8 @@
     <Content Include="wwwroot\polyfills.bundle.js" />
     <Content Include="wwwroot\styles.bundle.js" />
     <Content Include="wwwroot\vendor.bundle.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\test.bigsbyspot.org - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
