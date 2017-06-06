@@ -405,3 +405,34 @@ Angular 4 & OWIN Web Api
         and, after clicking ```Call Service``` button, should display:
         
         ![](images/simpleAfterCall.PNG)
+
+8. Build watch Angular application
+    1. Remove previous *build* task binding
+
+    2. Add script in ```pacakge.json```
+        ```json
+        {
+            // other content
+            "scripts": {
+                "ng": "ng",
+                "start": "ng serve",
+                "build": "ng build",
+                "build-watch": "ng build --watch",
+                "test": "ng test",
+                "lint": "ng lint",
+                "e2e": "ng e2e"
+            },
+            //other content
+        }
+        ```
+    3. Set tase bidning, in ```pacakge.json```
+        ```json
+        {
+            // other content
+            "-vs-binding": {
+            "ProjectOpened": [
+            "build-watch"
+            ]        
+        }
+        ```
+    This will re-compile and re-package the Angular application into ```wwwroot``` folder.

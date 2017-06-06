@@ -47,8 +47,8 @@
     "typescript": "~2.3.3"
   },
   "-vs-binding": {
-    "AfterBuild": [
-      "build"
+    "ProjectOpened": [
+      "build-watch"
     ]
   }
 }
