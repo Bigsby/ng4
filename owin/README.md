@@ -230,7 +230,11 @@ Angular 4 & OWIN Web Api
                 - In the command-line (running **ng serve**) hit *Ctrl+C*
 
 6. Add Angular application to Visual Studio project:
-    1. Include files in project. In Visual Studio:
+    1. Install [npm Task Runner](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner)
+    2. Set *External Web Tools* order by
+        1. Going to *Tools* - *Options* - *Projects and Solutions* - *Web Package Management* - *External Web Tools*
+        2. Put ```$(PATH)``` at the top of the list
+    3. Include files in project. In Visual Studio:
         1.  Toggle *Show All Files* (![](images/vsShowAll.PNG))
         2. delete uncessary files:
             - ```.editorconfig```
@@ -243,11 +247,11 @@ Angular 4 & OWIN Web Api
         
         *Note*: 
         - **DOT NOT include ```node_modules``` folder**. It's not useful and takes ages to include the 20k+ files (180MB+).
-    2. Edit project file (unloading the project or in another editor) and add this property to the top ```<PropertyGroup>...</PropertyGroup>``` to prevent Visual Studio from transpiling **TypeScript** (**.ts**) files:
+    4. Edit project file (unloading the project or in another editor) and add this property to the top ```<PropertyGroup>...</PropertyGroup>``` to prevent Visual Studio from transpiling **TypeScript** (**.ts**) files:
         ```xml
         <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
         ```
-    3. Set Angular build (**ng build**) output folder to ```wwwroot```, in ```.angular-cli.json```:
+    5. Set Angular build (**ng build**) output folder to ```wwwroot```, in ```.angular-cli.json```:
         ```json
         {
             //.. other content
@@ -261,11 +265,11 @@ Angular 4 & OWIN Web Api
             //.. other content
             }
         ```
-    4. Set *build* to run on project build.
+    6. Set *build* to run on project build.
         1. Right-click ```pacakge.json``` - *Task Runner Explorer*
         2. Right-click *package.json - Custom - build*
         3. Select *Bindings - After Build*
-    5. Configure *Static Files Middleware* to default to ```index.html``` in ```Startup.cs```
+    7. Configure *Static Files Middleware* to default to ```index.html``` in ```Startup.cs```
         ```csharp
         using Microsoft.Owin;
         using Microsoft.Owin.FileSystems;
@@ -305,7 +309,7 @@ Angular 4 & OWIN Web Api
             }
         }
         ```
-    6. Run and test by hitting **F5**. The default browser should open in "http://localhost:59125/" and display the Angular applicaiton as before:
+    8. Run and test by hitting **F5**. The default browser should open in "http://localhost:59125/" and display the Angular applicaiton as before:
         ![](images/ng4start.PNG)
 
 7. Add a client Service to call the Web Api

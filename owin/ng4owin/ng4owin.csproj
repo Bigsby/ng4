@@ -46,14 +46,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <ExcludeFromPackageFolders Include="e2e;src">
-      <FromTarget>NotNeeded</FromTarget>
-    </ExcludeFromPackageFolders>
-    <ExcludeFromPackageFiles Include=".angular-cli.json;karma.conf.js;package.json;packages.config;protractor.conf.js;tsconfig.json;tslint.json">
-      <FromTarget>NotNeeded</FromTarget>
-    </ExcludeFromPackageFiles>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -106,14 +98,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include=".angular-cli.json" />
-    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="Client\.angular-cli.json" />
+    <Content Include="Client\e2e\tsconfig.e2e.json" />
     <Content Include="package.json" />
-    <Content Include="src\assets\.gitkeep" />
-    <Content Include="src\tsconfig.app.json" />
-    <Content Include="src\tsconfig.spec.json" />
-    <Content Include="tsconfig.json" />
-    <Content Include="tslint.json" />
+    <Content Include="Client\src\assets\.gitkeep" />
+    <Content Include="Client\src\tsconfig.app.json" />
+    <Content Include="Client\src\tsconfig.spec.json" />
+    <Content Include="Client\tsconfig.json" />
+    <Content Include="Client\tslint.json" />
     <Content Include="wwwroot\favicon.ico" />
     <Content Include="wwwroot\index.html" />
     <Content Include="wwwroot\inline.bundle.js" />
@@ -136,13 +128,13 @@
     <Content Include="wwwroot\vendor.bundle.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="karma.conf.js" />
-    <Content Include="protractor.conf.js" />
-    <Content Include="src\app\app.component.css" />
-    <Content Include="src\app\app.component.html" />
-    <Content Include="src\favicon.ico" />
-    <Content Include="src\index.html" />
-    <Content Include="src\styles.css" />
+    <Content Include="Client\karma.conf.js" />
+    <Content Include="Client\protractor.conf.js" />
+    <Content Include="Client\src\app\app.component.css" />
+    <Content Include="Client\src\app\app.component.html" />
+    <Content Include="Client\src\favicon.ico" />
+    <Content Include="Client\src\index.html" />
+    <Content Include="Client\src\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -151,19 +143,19 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
-    <TypeScriptCompile Include="e2e\app.po.ts" />
-    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
-    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\simple.service.ts" />
-    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
-    <TypeScriptCompile Include="src\environments\environment.ts" />
-    <TypeScriptCompile Include="src\main.ts" />
-    <TypeScriptCompile Include="src\polyfills.ts" />
-    <TypeScriptCompile Include="src\test.ts" />
-    <TypeScriptCompile Include="src\typings.d.ts" />
+    <TypeScriptCompile Include="Client\e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="Client\e2e\app.po.ts" />
+    <TypeScriptCompile Include="Client\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="Client\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="Client\src\app\app.component.ts" />
+    <TypeScriptCompile Include="Client\src\app\app.module.ts" />
+    <TypeScriptCompile Include="Client\src\app\simple.service.ts" />
+    <TypeScriptCompile Include="Client\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="Client\src\environments\environment.ts" />
+    <TypeScriptCompile Include="Client\src\main.ts" />
+    <TypeScriptCompile Include="Client\src\polyfills.ts" />
+    <TypeScriptCompile Include="Client\src\test.ts" />
+    <TypeScriptCompile Include="Client\src\typings.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

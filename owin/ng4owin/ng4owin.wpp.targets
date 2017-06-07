@@ -1,0 +1,10 @@
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ExcludeFromPackageFolders Include="e2e;src">
+      <FromTarget>NotNeeded</FromTarget>
+    </ExcludeFromPackageFolders>
+    <ExcludeFromPackageFiles Include=".angular-cli.json;karma.conf.js;package.json;packages.config;protractor.conf.js;tsconfig.json;tslint.json">
+      <FromTarget>NotNeeded</FromTarget>
+    </ExcludeFromPackageFiles>
+  </ItemGroup>
+</Project>
