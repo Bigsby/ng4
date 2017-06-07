@@ -113,6 +113,8 @@
     <Content Include="wwwroot\polyfills.bundle.js" />
     <Content Include="wwwroot\styles.bundle.js" />
     <Content Include="wwwroot\vendor.bundle.js" />
+    <Content Include="Client\package.json" />
+    <Content Include="ng4owin.wpp.targets" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\test.bigsbyspot.org - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
