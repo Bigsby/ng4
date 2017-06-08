@@ -439,7 +439,11 @@ Angular 4 & OWIN Web Api
             ]        
         }
         ```
-    This will re-compile and re-package the Angular application into ```wwwroot``` folder.
+        This will re-compile and re-package the Angular application into ```wwwroot``` folder.
+
+    4. Since the project is already opened, run ```bluid-watch``` in *Task Runner Explorer*:
+        1. Right-click *package.json* - *Custom* - *build-watch*
+        2. Select *Run*
 
 9. Debugging
     Running in *Google Chrome* will enable debugging both the client **.ts** files and the server (Api) **.cs** files.
