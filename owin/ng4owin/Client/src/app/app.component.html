@@ -1,2 +1,9 @@
-<p>Data from Api Service: {{data}}</p>
-<button (click)="callService()">Call Service</button>
+<span *ngIf="user">{{user.DisplayName}}</span>
+<button *ngIf="hasAuthenticationData && !isAuthenticated" (click)="logIn()">LogIn</button>
+<button *ngIf="hasAuthenticationData && isAuthenticated" (click)="logOut()">LogOut</button>
+<a routerLink="../home" routerLinkActive="activeLink">Home</a>
+<a routerLink="../other" routerLinkActive="activeLink">Other</a>
+<a routerLink="../feature" routerLinkActive="activeLink">Feature</a>
+<a routerLink="../private" routerLinkActive="activeLink">Private</a>
+<br/>
+<router-outlet></router-outlet>

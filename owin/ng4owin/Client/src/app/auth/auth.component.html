@@ -1,0 +1,9 @@
+<label>Username:
+    <input [(ngModel)]="username"/>
+</label>
+<label>
+    Password:
+    <input type="password" [(ngModel)]="password" />
+</label>
+<button (click)="logIn()" [disabled]="isBusy">LogIn</button>
+<div *ngIf="hasError">Something went wrong!</div>
