@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ "./src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -6,7 +6,7 @@ webpackJsonp([1],{
 var map = {
 	"./feature/feature.module": [
 		"./src/app/feature/feature.module.ts",
-		5
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -616,7 +616,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/other/other.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "Other\r\n<p>Data from Api Service: {{data}}</p>\r\n<button (click)=\"callService()\">Call Service</button>"
+module.exports = "Other\r\n<p>Data from Api Service: {{data}}</p>\r\n<button (click)=\"callService()\">Call Service</button>\r\n<input type=\"file\" (change)=\"fileChange($event)\" placeholder=\"File to upload\" accept=\".txt\">"
 
 /***/ }),
 
@@ -625,7 +625,8 @@ module.exports = "Other\r\n<p>Data from Api Service: {{data}}</p>\r\n<button (cl
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__simple_service__ = __webpack_require__("./src/app/simple.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__simple_service__ = __webpack_require__("./src/app/simple.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OtherComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -638,14 +639,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var OtherComponent = (function () {
-    function OtherComponent(simpleService) {
+    function OtherComponent(simpleService, http) {
         this.simpleService = simpleService;
+        this.http = http;
+        this.isUploading = false;
         this.data = "Nothing yet";
     }
     OtherComponent.prototype.callService = function () {
         var _this = this;
         this.simpleService.get().then(function (serviceData) { return _this.data = serviceData; });
+    };
+    OtherComponent.prototype.fileChange = function (event) {
+        var _this = this;
+        this.isUploading = true;
+        var fileList = event.target.files;
+        if (fileList.length > 0) {
+            var file = fileList[0];
+            var formData = new FormData();
+            formData.append('uploadFile', file, file.name);
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
+            //headers.append('Content-Type', 'multipart/form-data');
+            headers.append('Accept', 'application/json');
+            var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
+            this.http.post("api/file/upload", formData, options).toPromise().then(function (response) { return _this.isUploading = false; });
+            //.map(res => res.json())
+            ////.catch(error => Observable.throw(error))
+            //.subscribe(
+            //data => console.log('success'),
+            //error => console.log(error)
+            //)
+        }
     };
     return OtherComponent;
 }());
@@ -655,10 +680,10 @@ OtherComponent = __decorate([
         template: __webpack_require__("./src/app/other/other.component.html"),
         styles: [__webpack_require__("./src/app/other/other.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__simple_service__["a" /* SimpleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__simple_service__["a" /* SimpleService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__simple_service__["a" /* SimpleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__simple_service__["a" /* SimpleService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _b || Object])
 ], OtherComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=other.component.js.map
 
 /***/ }),

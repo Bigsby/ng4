@@ -67,6 +67,7 @@ https://www.w3.org/TR/custom-elements/
 https://www.w3.org/TR/css3-transitions/#animatable-properties
 https://www.w3.org/TR/css-scoping-1
 http://enable-cors.org/server.html
+https://www.primefaces.org/primeng/#/fileupload
 
 Tour of Heroes
 > ng generate component HeroDetail -is -it --flat --spec false --prefix false
