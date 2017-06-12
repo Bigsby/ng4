@@ -38,6 +38,7 @@ https://angular.io/docs/ts/latest/api/forms/index/CheckboxControlValueAccessor-d
 
 https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines
 http://reactivex.io/rxjs
+https://xgrommx.github.io/rx-book/index.html
 http://www.learnrxjs.io/operators/transformation/switchmap.html
 http://karma-runner.github.io/
 https://www.npmjs.com/package/codelyzer
