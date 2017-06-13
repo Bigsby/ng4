@@ -1,0 +1,7 @@
+<h1>Dynamic Component</h1>
+<ul>
+  <li *ngFor="let component of components">
+    <button (click)="selectComponent(component)">{{component['name']}}</button>
+  </li>
+</ul>
+<ng-template dynamic-host></ng-template>
