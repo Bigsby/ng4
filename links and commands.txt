@@ -9,6 +9,8 @@ https://angular.io/docs/ts/latest/guide/glossary.html
 https://angular.io/docs/ts/latest/guide/animations.html
 https://angular.io/guide/component-styles
 
+EVENTS
+https://angular.io/guide/component-interaction#!#bidirectional-service
 
 https://angular.io/docs/ts/latest/guide/reactive-forms.html
 
