@@ -7,6 +7,8 @@
 * https://angular.io/docs/ts/latest/guide/style-guide.html
 https://angular.io/docs/ts/latest/guide/glossary.html
 https://angular.io/docs/ts/latest/guide/animations.html
+https://angular.io/guide/component-styles
+
 
 https://angular.io/docs/ts/latest/guide/reactive-forms.html
 
