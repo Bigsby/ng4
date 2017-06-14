@@ -14,13 +14,13 @@ namespace ng4owin.Api
             var isMultiPart = Request.Content.IsMimeMultipartContent();
             if (isMultiPart)
             {
+                Directory.CreateDirectory(folderPath);
                 var multi = await Request.Content.ReadAsMultipartAsync();
                 foreach (var content in multi.Contents)
                     using (var fileStream = File.OpenWrite(Path.Combine(folderPath, content.Headers.ContentDisposition.FileName.Trim('"'))))
                         await content.CopyToAsync(fileStream);
             }
-
-
         }
+
     }
 }

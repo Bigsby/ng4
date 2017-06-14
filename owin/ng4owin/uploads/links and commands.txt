@@ -1,0 +1,106 @@
+* https://angular.io/docs/ts/latest/guide/appmodule.html
+* https://angular.io/docs/ts/latest/guide/displaying-data.html
+* https://angular.io/docs/ts/latest/guide/user-input.html
+* https://angular.io/docs/ts/latest/guide/forms.html
+* https://angular.io/docs/ts/latest/guide/dependency-injection.html
+* https://angular.io/docs/ts/latest/guide/template-syntax.html
+* https://angular.io/docs/ts/latest/guide/style-guide.html
+https://angular.io/docs/ts/latest/guide/glossary.html
+https://angular.io/docs/ts/latest/guide/animations.html
+
+https://angular.io/docs/ts/latest/guide/reactive-forms.html
+
+https://angular.io/docs/ts/latest/guide/pipes.html
+https://angular.io/docs/ts/latest/guide/attribute-directives.html
+https://angular.io/docs/ts/latest/guide/structural-directives.html
+https://angular.io/docs/ts/latest/guide/ngmodule.html
+https://angular.io/docs/ts/latest/guide/security.html
+https://angular.io/docs/ts/latest/guide/hierarchical-dependency-injection.html
+https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
+https://angular.io/docs/ts/latest/guide/router.html
+https://angular.io/docs/ts/latest/guide/server-communication.html#in-mem-web-api
+https://angular.io/docs/ts/latest/guide/testing.html
+
+https://angular.io/docs/ts/latest/cookbook/ngmodule-faq.html#q-root-component-or-module
+https://angular.io/docs/ts/latest/cookbook/aot-compiler.html
+https://angular.io/docs/ts/latest/cookbook/form-validation.html
+
+https://angular.io/docs/ts/latest/api/core/index/ViewChild-decorator.html
+https://angular.io/docs/ts/latest/api/core/index/ContentChild-decorator.html
+https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html
+https://angular.io/docs/ts/latest/api/forms/index/ControlValueAccessor-interface.html
+https://angular.io/docs/ts/latest/api/common/index/NgFor-directive.html
+https://angular.io/docs/ts/latest/api/common/index/APP_BASE_HREF-let.html
+https://angular.io/docs/ts/latest/api/forms/index/RadioControlValueAccessor-directive.html
+https://angular.io/docs/ts/latest/api/forms/index/SelectControlValueAccessor-directive.html
+https://angular.io/docs/ts/latest/api/forms/index/CheckboxControlValueAccessor-directive.html
+
+
+https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines
+http://reactivex.io/rxjs
+http://www.learnrxjs.io/operators/transformation/switchmap.html
+http://karma-runner.github.io/
+https://www.npmjs.com/package/codelyzer
+http://closure-compiler.appspot.com
+https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
+https://webpack.js.org/
+https://angular.io/docs/ts/latest/guide/webpack.html
+https://github.com/angular/angular-cli/tree/master/packages/%40ngtools/webpack
+
+
+https://developers.google.com/web/tools/chrome-devtools/network-performance/understanding-resource-timing
+https://www.webpagetest.org/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+http://exploringjs.com/es6/ch_promises.html
+http://exploringjs.com/es6.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://en.wikipedia.org/wiki/Service_locator_pattern
+http://blog.thoughtram.io/angular/2015/09/03/forward-references-in-angular-2.html
+https://coursetro.com/posts/code/66/Angular-4-Reactive-Forms-Tutorial
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+https://developer.mozilla.org/en-US/docs/Web/SVG
+https://developer.mozilla.org/en-US/docs/Web/Web_Components
+https://developer.mozilla.org/en/docs/Web/CSS/@import
+https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM
+https://www.w3.org/TR/custom-elements/
+https://www.w3.org/TR/css3-transitions/#animatable-properties
+https://www.w3.org/TR/css-scoping-1
+http://enable-cors.org/server.html
+https://www.primefaces.org/primeng/#/fileupload
+
+Tour of Heroes
+> ng generate component HeroDetail -is -it --flat --spec false --prefix false
+> ng generate class Hero --spec false
+> ng generate service Hero --flat --spec false
+> ng generate component App -is -it -flat --spec false --prefix false
+> ng generate component Dashboard -is -it --flat --spec false --prefix false
+> ng generate module AppRouting --flat --spec false
+> npm i --save angular-in-memory-web-api
+> ng generate service InMemoryData -false --spec false
+
+Hero Form
+> ng new hero-form -st
+> ng generate class Hero
+> 
+
+
+ERRORS:
+Message: Only void and foreign elements can be self closed "button"
+Problem: HTML tag "button" is self closing, e.g., "<button/>" and must be "<button></button>"
+
+Message: Can't bind to 'ngModel' since it isn't a known property of 'input'
+Problem: FormsModule not imported add "@angular/forms" in app.module and to AppModule imports
+
+
+Prevent multiple imports of a module
+export class CoreModule {
+  constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
+    throwIfAlreadyLoaded(parentModule, 'CoreModule');
+  }
+}
+export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
+  if (parentModule) {
+    throw new Error(`${moduleName} has already been loaded. Import Core modules in the AppModule only.`);
+  }
+}
