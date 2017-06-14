@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ModelStateAnimation } from "./model-state.animation";
+import { ModelStateAnimation } from "./_animations/model-state.animation";
 
 @Component({
   selector: 'app-root',

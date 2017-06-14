@@ -1,12 +1,12 @@
 import { trigger, state, animate, transition, style } from '@angular/animations';
 
 export const ModelStateAnimation =
-    trigger('modelState', [
+  trigger('modelState', [
     state('inactive', style({
       backgroundColor: '#eee',
       transform: 'scale(1)'
     })),
-    state('active',   style({
+    state('active', style({
       backgroundColor: '#cfd8dc',
       transform: 'scale(1.1)'
     })),

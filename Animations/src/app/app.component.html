@@ -1,3 +1,8 @@
 
 <button (click)="toggleState()">Toggle State</button>
 <div [@modelState]="state" style="width:200px;" >{{state}}</div>
+<br/>
+<button routerLink="/one">One</button>
+<button routerLink="/two">Two</button>
+<br/>
+<router-outlet></router-outlet>
