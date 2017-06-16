@@ -1,0 +1,4 @@
+<h2>Select a Set</h2>
+<ul>
+  <li *ngFor="let set of sets" [routerLink]="['/list', set.id]">{{set.name}}</li>
+</ul>

@@ -1,0 +1,39 @@
+@import "../styles/variables.less";
+
+:host {
+    display: none;
+}
+
+.dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+    overflow: hidden;
+
+    .dialog-body {
+        padding: 20px;
+        background: @base-background-color;
+        margin: 0 auto;
+    }
+}
+
+.dialog-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: @base-color;
+    opacity: 0.75;
+    
+    z-index: 900;
+}

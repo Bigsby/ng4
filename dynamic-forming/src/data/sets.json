@@ -1,0 +1,54 @@
+[
+    {
+        "id": "news",
+        "name": "News",
+        "list":{
+            "columns":[
+                {
+                    "property": "id",
+                    "name": "Id"
+                },
+                {
+                    "property": "name",
+                    "name": "Name"
+                }
+            ]
+        },
+        "form":{
+            "fields":[
+                {
+                    "property": "id",
+                    "name": "Id",
+                    "isRequired": true,
+                    "type": "text"
+                },
+                {
+                    "property": "name",
+                    "name": "Name",
+                    "type": "text"
+                },
+                {
+                    "property": "active",
+                    "name": "Active",
+                    "type": "checkbox"
+                }
+            ]
+        }
+    },
+    {
+        "id": "clients",
+        "name": "Clients",
+        "list":{
+            "columns":[
+                {
+                    "property": "id",
+                    "name": "Id"
+                },
+                {
+                    "property": "name",
+                    "name": "Name"
+                }
+            ]
+        }
+    }
+]

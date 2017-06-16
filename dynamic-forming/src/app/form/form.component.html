@@ -1,0 +1,38 @@
+<h2>Edit {{set?.name}}</h2>
+<form (ngSubmit)="onSubmit()" #theForm="ngForm">
+    <div *ngFor="let field of set?.form?.fields" [ngSwitch]="field.type">
+        <div class="form-field" *ngSwitchCase="FieldType.text">
+            <input [id]="field.property" [name]="field.property" [(ngModel)]="item[field.property]" [required]="field.isRequired" />
+            <label [for]="field.property">{{field.name}}</label>
+        </div>
+
+        <div class="form-field" *ngSwitchCase="FieldType.password">
+            <input [id]="field.property" [name]="field.property" [(ngModel)]="item[field.property]" type="password" [required]="field.isRequired" />
+            <label [for]="field.property">{{field.name}}</label>
+        </div>
+
+        <div class="form-field" *ngSwitchCase="FieldType.textarea">
+            <textarea [id]="field.property" [name]="field.property" [(ngModel)]="item[field.property]" [required]="field.isRequired"></textarea>
+            <label [for]="field.property">{{field.name}}</label>
+        </div>
+
+        <div class="form-field horizontal" *ngSwitchCase="FieldType.checkbox">
+            <input *ngIf="field.type === 'checkbox'" type="checkbox" [id]="field.property" [name]="field.property" [(ngModel)]="item[field.property]" />
+            <label [for]="field.property">{{field.name}}</label>
+        </div>
+
+        <div class="form-field" *ngSwitchCase="FieldType.file">
+            <input id="file" type="file" [required]="field.isRequired" />
+            <label for="file">Choose File...</label>
+            <label for="file">Field</label>
+        </div>
+    </div>
+    <button class="success" type="submit" [disabled]="!theForm.form.dirty || !theForm.form.valid">Save</button>
+    <button [routerLink]="['/list', set?.id]">Cancel</button>
+</form>
+<button (click)="dialog.open()">Dialog</button>
+<dialog #dialog>
+    <h1>A Tall Custom Modal!</h1>
+    some stuff
+    <button (click)="dialog.close()">Close</button>
+</dialog>

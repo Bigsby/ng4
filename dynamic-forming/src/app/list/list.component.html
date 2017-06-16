@@ -1,0 +1,41 @@
+<div class="header">
+    <h2>{{set?.name}}</h2>
+    <!-- TODO: new item -->
+    <button class="round" [routerLink]="['/edit', set?.id, 'new']">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+        </span>
+    </button>
+</div>
+<table class="items">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th *ngFor="let column of set?.list?.columns">{{column.name}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of list">
+            <td class="actions">
+                <button class="round" [routerLink]="['/edit', set?.id, item?.id]">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                </button>
+            </td>
+            <td class="actions">
+                <button class="round danger">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </button>
+            </td>
+            
+            <td *ngFor="let column of set?.list?.columns">{{item[column.property]}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+[
+    {
+        "id": "n1",
+        "name": "News One",
+        "active": true
+    },
+    {
+        "id": "n2",
+        "name": "News Two",
+        "active": false
+    }
+]
